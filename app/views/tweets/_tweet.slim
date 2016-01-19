@@ -1,0 +1,7 @@
+div.tweet(data-tweet-id=tweet.id)
+  span.name ="#{tweet.name} :"
+  span.comment =tweet.content
+  div.footer
+    button.fav-button(data-tweet-id=tweet.id)
+      |🌟
+      span.num =tweet.fav

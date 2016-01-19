@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>times-nakajima</title>
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+    $(function(){
+      $('#submit-btn').on('click',function(){
+        var name = $('#my-name').val()
+        var comment = $('#my-comment').val()
+        $('#comments').prepend($('<p>').text(name+' : '+comment))
+        $('#my-comment').val('')
+      })
+    })
+    </script>
+  </head>
+  <body>
+    <input id="my-name" type="text" value='名無しさん' />
+    <textarea id="my-comment"></textarea>
+    <button id='submit-btn'>発言</button>
+    <div id='comments'></div>
+  </body>
+</html>
